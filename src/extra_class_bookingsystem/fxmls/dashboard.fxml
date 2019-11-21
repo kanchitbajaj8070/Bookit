@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -12,6 +11,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -19,20 +19,97 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane prefHeight="531.0" prefWidth="977.0" style="-FX-BORDER-COLOR: #00A2D3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extra_class_bookingsystem.Controllers.dashboard">
+<StackPane prefHeight="576.0" prefWidth="1117.0" style="-FX-BORDER-COLOR: #00A2D3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extra_class_bookingsystem.Controllers.dashboard">
    <children>
-      <StackPane prefHeight="529.0" prefWidth="993.0">
+      <StackPane prefHeight="574.0" prefWidth="1162.0">
          <children>
-            <AnchorPane onMouseClicked="#clear_selection" prefHeight="524.0" prefWidth="1085.0" style="-fx-background-color: WHITE; -fx-border-color: #00A2D3;">
+            <AnchorPane onMouseClicked="#clear_selection" prefHeight="574.0" prefWidth="1097.0" style="-fx-background-color: #eeeeee;">
                <children>
-                  <StackPane layoutX="257.0" layoutY="75.0" prefHeight="450.0" prefWidth="842.0" style="-fx-border-color: #333645;">
+                  <StackPane layoutY="7.0" prefHeight="145.0" prefWidth="255.0">
                      <children>
-                        <TableView fx:id="tableData" editable="true" prefHeight="431.0" prefWidth="838.0" snapToPixel="false" stylesheets="@../../style.css">
+                        <ImageView fx:id="logo" fitHeight="187.0" fitWidth="255.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </StackPane>
+                  <VBox layoutX="-6.0" layoutY="202.0" prefHeight="372.0" prefWidth="270.0" spacing="35.0" style="-fx-background-color: #2262c6; -fx-background-radius: 0 40 0 0;">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="177.0" text="Available Options" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMousePressed="#add_func1" prefHeight="57.0" prefWidth="205.0" style="-fx-background-color: transparent;" stylesheets="@../newButtons.css" text="Book A Room" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#084f8a" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons8_plus_math_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#deleteRowFromTable" prefHeight="55.0" prefWidth="231.0" style="-fx-background-color: transparent;" stylesheets="@../newButtons.css" text="Delete Selected Booking" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#08518a" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons8_delete_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="generateButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#handleGenerateAction" prefHeight="36.0" prefWidth="233.0" style="-fx-background-color: transparent;" stylesheets="@../newButtons.css" text="Generate pdf of bookings" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../icons8_export_pdf_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="logooutBuron" alignment="BASELINE_LEFT" mnemonicParsing="false" onMousePressed="#sign_out_function" prefHeight="41.0" prefWidth="209.0" style="-fx-background-color: transparent;" stylesheets="@../newButtons.css" text=" Logout" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../icons8_arrow_pointing_left_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <StackPane layoutX="266.0" layoutY="108.0" prefHeight="465.0" prefWidth="890.0" style="-fx-border-color: #333645;">
+                     <children>
+                        <TableView fx:id="tableData" editable="true" prefHeight="456.0" prefWidth="880.0" snapToPixel="false" stylesheets="@../../style.css">
                           <columns>
                             <TableColumn fx:id="book_date" editable="false" prefWidth="153.0" text="Date" />
-                            <TableColumn fx:id="timeslot" editable="false" prefWidth="141.0" text="Time" />
-                              <TableColumn fx:id="roomname" editable="false" prefWidth="160.0" text="Room" />
-                              <TableColumn fx:id="name" editable="false" maxWidth="1.7976931348623157E308" minWidth="279.0" prefWidth="383.0" text="Description" />
+                            <TableColumn fx:id="timeslot" editable="false" prefWidth="161.0" text="Time" />
+                              <TableColumn fx:id="roomname" editable="false" prefWidth="158.0" text="Room" />
+                              <TableColumn fx:id="name" editable="false" maxWidth="1.7976931348623157E308" minWidth="279.0" prefWidth="424.0" text="Description" />
                           </columns>
                            <contextMenu>
                               <ContextMenu fx:id="contextMenuDashboard">
@@ -44,81 +121,13 @@
                         </TableView>
                      </children>
                   </StackPane>
-                  <HBox alignment="BASELINE_RIGHT" layoutX="856.0" prefHeight="29.0" prefWidth="247.0">
-                     <children>
-                        <Label fx:id="USER_LABEL" alignment="BOTTOM_RIGHT" prefHeight="37.0" prefWidth="123.0" styleClass="jfx-field" stylesheets="@../style.css" text="no username">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="NONE" />
-                           </cursor>
-                           <graphic>
-                              <FontAwesomeIconView fill="#00a2d3" fontSmoothingType="LCD" glyphName="USER" size="18" />
-                           </graphic>
-                        </Label>
-                        <Button fx:id="sign_out" alignment="BOTTOM_RIGHT" lineSpacing="1.0" mnemonicParsing="false" onMousePressed="#sign_out_function" prefHeight="28.0" prefWidth="79.0" styleClass="logout-button" stylesheets="@../../newStyles.css" text="Logout" textAlignment="JUSTIFY" underline="true">
-                           <padding>
-                              <Insets left="2.0" />
-                           </padding>
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <VBox layoutX="-2.0" layoutY="154.0" prefHeight="177.0" prefWidth="257.0" spacing="20.0">
-                     <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMousePressed="#add_func1" prefHeight="9.0" prefWidth="247.0" styleClass="lion-default" stylesheets="@../style.css" text="New Booking" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#084f8a" />
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <graphic>
-                              <FontAwesomeIconView fill="#00a2d3" fontSmoothingType="LCD" glyphName="PLUS" size="14" />
-                           </graphic>
-                        </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#deleteRowFromTable" prefHeight="13.0" prefWidth="245.0" styleClass="lion-default" stylesheets="@../style.css" text="Delete Selected Booking" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#08518a" />
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <graphic>
-                              <FontAwesomeIconView fill="#00a2d3" fontSmoothingType="LCD" glyphName="TRASH" size="14" />
-                           </graphic>
-                        </Button>
-                        <Button fx:id="generateButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#handleGenerateAction" prefHeight="8.0" prefWidth="247.0" styleClass="lion-default" stylesheets="@../style.css" text="Generate pdf of bookings" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                           <graphic>
-                              <FontAwesomeIconView fill="#00a2d3" fontSmoothingType="LCD" glyphName="BOOK" size="14" />
-                           </graphic>
-                        </Button>
-                     </children>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" />
-                     </padding>
-                  </VBox>
-                  <Label fx:id="loadLabel" layoutX="8.0" layoutY="484.0" prefHeight="17.0" prefWidth="179.0" text="Loading Data..." />
-                  <ProgressBar fx:id="progressoftable" layoutX="-2.0" layoutY="505.0" prefHeight="0.0" prefWidth="257.0" style="-fx-accent: #00A2D3;" />
+                  <HBox alignment="BASELINE_RIGHT" layoutX="856.0" prefHeight="29.0" prefWidth="247.0" />
+                  <Label fx:id="loadLabel" layoutX="8.0" layoutY="484.0" prefHeight="17.0" prefWidth="179.0" text="Loading Data..." visible="false" />
+                  <ProgressBar fx:id="progressoftable" layoutX="-2.0" layoutY="505.0" prefHeight="0.0" prefWidth="257.0" style="-fx-accent: #00A2D3;" visible="false" />
                   <ProgressIndicator fx:id="progressDelete" layoutX="14.0" layoutY="475.0" prefHeight="39.0" prefWidth="235.0" visible="false" />
-                  <HBox layoutX="205.0" layoutY="46.0" prefHeight="21.0" prefWidth="901.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="258.0" layoutY="-8.0" prefHeight="0.0" prefWidth="905.0" style="-fx-background-color: #2226c6; -fx-background-radius: 10px;">
                      <children>
-                        <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onMouseClicked="#home_window_open" prefHeight="34.0" prefWidth="240.0" styleClass="glass-grey" stylesheets="@../style.css" text="User Detials">
+                        <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onMouseClicked="#home_window_open" prefHeight="30.0" prefWidth="180.0" styleClass="glass-grey" stylesheets="@../style.css" text="User Detials">
                            <padding>
                               <Insets bottom="1.0" left="10.0" right="1.0" top="2.0" />
                            </padding>
@@ -128,74 +137,120 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
-                           <graphic>
-                              <FontAwesomeIconView fill="#00a2d3cc" glyphName="HOME" size="20" wrappingWidth="16.714285850524902" />
-                           </graphic>
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../icons8_user_96px_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
-                        <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onMouseClicked="#change_password_window_open" prefHeight="36.0" prefWidth="220.0" styleClass="glass-grey" stylesheets="@../style.css" text="Change Password">
+                        <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onMouseClicked="#change_password_window_open" prefHeight="30.0" prefWidth="180.0" styleClass="glass-grey" stylesheets="@../style.css" text="Change Password">
                            <padding>
                               <Insets bottom="1.0" left="10.0" right="1.0" top="2.0" />
                            </padding>
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
-                           <graphic>
-                              <FontAwesomeIconView fill="#00a2d3cc" glyphName="KEY" size="20" wrappingWidth="21.0" />
-                           </graphic>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../icons8_privacy_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
-                        <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onMouseClicked="#handle_edit_info_button" prefHeight="52.0" prefWidth="240.0" styleClass="glass-grey" stylesheets="@../style.css" text="Edit Name">
+                        <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onMouseClicked="#handle_edit_info_button" prefHeight="30.0" prefWidth="180.0" styleClass="glass-grey" stylesheets="@../style.css" text="Edit Name">
                            <padding>
                               <Insets bottom="1.0" left="10.0" right="1.0" top="2.0" />
                            </padding>
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
-                           <graphic>
-                              <FontAwesomeIconView fill="#00a2d3cc" glyphName="EDIT" size="20" wrappingWidth="18.14285707473755" />
-                           </graphic>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../icons8_edit_96px_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
-                        <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onMouseClicked="#contactus_window_open" prefHeight="24.0" prefWidth="169.0" styleClass="glass-grey" stylesheets="@../style.css" text="Contact Us">
+                        <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onMouseClicked="#contactus_window_open" prefHeight="30.0" prefWidth="180.0" styleClass="glass-grey" stylesheets="@../style.css" text="Contact Us">
                            <padding>
                               <Insets bottom="1.0" left="10.0" right="1.0" top="2.0" />
                            </padding>
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
-                           <graphic>
-                              <FontAwesomeIconView fill="#00a2d3cc" glyphName="SUPPORT" size="20" wrappingWidth="18.0" />
-                           </graphic>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../icons8_contact_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
+                        <VBox alignment="TOP_RIGHT" prefHeight="42.0" prefWidth="140.0" spacing="2.0">
+                           <children>
+                              <Label fx:id="USER_LABEL" alignment="BOTTOM_RIGHT" prefHeight="33.0" prefWidth="143.0" styleClass="jfx-field" stylesheets="@../style.css" text="no username" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="NONE" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                                       <image>
+                                          <Image url="@../icons8_male_user_96px_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                              <Button fx:id="sign_out" alignment="TOP_CENTER" contentDisplay="RIGHT" lineSpacing="1.0" mnemonicParsing="false" onMousePressed="#sign_out_function" prefHeight="28.0" prefWidth="79.0" styleClass="logout-button" stylesheets="@../../newStyles.css" text="Logout" textAlignment="RIGHT" textFill="WHITE" underline="true">
+                                 <padding>
+                                    <Insets left="2.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
                      </children>
                      <padding>
-                        <Insets bottom="5.0" left="45.0" right="5.0" />
+                        <Insets left="1.0" top="5.0" />
                      </padding>
                   </HBox>
-                  <StackPane layoutX="14.0">
-                     <children>
-                        <ImageView fx:id="logo" fitHeight="150.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </StackPane>
+                  <Label layoutX="265.0" layoutY="72.0" prefHeight="39.0" prefWidth="837.0" text="Current Bookings">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>

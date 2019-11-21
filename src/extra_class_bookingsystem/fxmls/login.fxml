@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -11,6 +10,8 @@
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
@@ -45,30 +46,42 @@
                   </JFXPasswordField>
                   </children>
               </Pane>
-            <ProgressBar fx:id="progress" layoutX="6.0" layoutY="378.0" prefHeight="23.0" prefWidth="443.0" progress="0.0" style="-fx-background-color: GREY;" />
-            <Label fx:id="progressLabel" alignment="BOTTOM_CENTER" layoutX="297.0" layoutY="122.0" prefHeight="21.0" prefWidth="159.0" text="Checking User Detials" textAlignment="CENTER" textFill="#00a2d3">
+            <ProgressBar fx:id="progress" layoutX="7.0" layoutY="379.0" prefHeight="23.0" prefWidth="443.0" progress="0.0" style="-fx-background-color: GREY;" />
+            <Label fx:id="progressLabel" alignment="BOTTOM_CENTER" layoutX="297.0" layoutY="122.0" prefHeight="21.0" prefWidth="159.0" text="Checking User Detials" textAlignment="CENTER" textFill="#00a2d3" visible="false">
                <effect>
                   <DropShadow color="#7fc7e1" />
                </effect></Label>
-            <ProgressIndicator fx:id="progressDashboard" layoutX="336.0" layoutY="30.0" prefHeight="83.0" prefWidth="81.0" style="-fx-progress-color: #00a2d3;" />
+            <ProgressIndicator fx:id="progressDashboard" layoutX="336.0" layoutY="30.0" prefHeight="83.0" prefWidth="81.0" style="-fx-progress-color: #00a2d3;" visible="false" />
             <VBox layoutX="14.0" layoutY="189.0" prefHeight="92.0" prefWidth="27.0" spacing="22.0">
                <children>
-                  <FontAwesomeIconView fill="#00a2d3" fontSmoothingType="LCD" glyphName="USER" size="32" />
-                  <FontAwesomeIconView fill="#00a2d3" fontSmoothingType="LCD" glyphName="KEY" size="30" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../icons8_user_96px_2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../icons8_password_1_96px.png" />
+                     </image>
+                  </ImageView>
                </children>
                <padding>
                   <Insets left="2.0" />
                </padding>
             </VBox>
-            <FontAwesomeIconView fill="#00a2d3" fontSmoothingType="LCD" glyphName="LOCK" layoutX="159.0" layoutY="137.0" size="125" textAlignment="CENTER" wrappingWidth="137.00000369921327" />
-                <Button fx:id="btnSignin" alignment="BASELINE_CENTER" layoutX="128.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="45.0" prefWidth="201.0" style="-fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: #00a2d3; -fx-border-width: 3px;" styleClass="login-button" stylesheets="@../../newStyles.css" text="Sign in" textFill="#00a2d3">
+                <Button fx:id="btnSignin" alignment="BASELINE_CENTER" layoutX="54.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="45.0" prefWidth="378.0" style="-fx-background-radius: 20px; -fx-border-radius: 40px; -fx-border-color: #2262c6; -fx-border-width: 3px;" styleClass="login-button" stylesheets="@../../newStyles.css" text="Sign in" textFill="#2262c6">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="Arial Black" size="18.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="169.0" layoutY="47.0">
+               <image>
+                  <Image url="@../icons8_lock_96px.png" />
+               </image>
+            </ImageView>
       
           </children>
       </AnchorPane>

@@ -69,15 +69,6 @@
     -fx-border-width :5px;
 	
 }
-.button-leftpane:pressed
-{
-	-fx-background-color: #00a2d3;
-	-fx-text-fill :  black;
-    -fx-underline :false;
-    -fx-cursor :  WAIT;
-    -fx-border-width :5px;
-	
-}
 .button-leftpane:clicked
 {
 	-fx-background-color: aqua   ;
@@ -86,14 +77,7 @@
     -fx-cursor :  WAIT;
     -fx-border-width :5px;
 }
-.button-leftpane:selected
-{
-	-fx-background-color: aqua   ;
-	-fx-text-fill :  blue ;
-    -fx-underline :false;
-    -fx-cursor :  WAIT;
-    -fx-border-width :5px;
-}
+
 .button-leftpane:default
 {
 	-fx-background-color: aqua   ;
@@ -147,7 +131,7 @@
 }
 
 .table-view .column-header {
-    -fx-background-color: #00A2D3;
+    -fx-background-color: #2226C6;
     -fx-font-size: 16px;
 }
 

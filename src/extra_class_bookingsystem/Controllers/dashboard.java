@@ -47,9 +47,7 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.FileChooser;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
+import javafx.stage.*;
 
 
 import javax.swing.text.Document;
@@ -66,7 +64,6 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import com.jfoenix.transitions.hamburger.*;
-import javafx.stage.WindowEvent;
 
 import static javafx.application.Application.launch;
 
@@ -548,12 +545,13 @@ public class dashboard  implements Initializable {
             primaryStage.setTitle("Change Password");
             primaryStage.setScene(new Scene(root));
             primaryStage.setResizable(false);
+            //primaryStage.initStyle(StageStyle.UNIFIED);
             primaryStage.show();
             primaryStage.initModality(Modality.APPLICATION_MODAL);
 
         } catch (Exception e) {
 
-            System.out.println(e.getCause());
+            System.out.println("rfkmrk"+e.getCause());
         }
 
     }

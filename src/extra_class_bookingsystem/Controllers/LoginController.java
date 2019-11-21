@@ -118,6 +118,7 @@ public void sign_in_action()
             if(res==true) {
                 Stage current = (Stage) txtUsername.getScene().getWindow();
                 current.close();
+
                 try {
                     Stage primaryStage = new Stage();
                     referenceStage=primaryStage;
@@ -350,6 +351,7 @@ public void update_password() throws Exception {
     public void initialize(URL location, ResourceBundle resources) {
         txtPassword.setText(null);
         txtUsername.setText(null);
+        btnForgot.setVisible(false);
         passwordDuplicate.visibleProperty().bind(showPasswordCheckBox.selectedProperty());
         txtPassword.textProperty().bindBidirectional(passwordDuplicate.textProperty());
 progressDashboard.setVisible(false);

@@ -86,7 +86,7 @@ combo-box,
 fx-border-color:#00a2d3;
 -fx-border-radius :30px;
 -fx-background-radius :30px;
- -fx-border-width: 5px;
+ -fx-border-width: 3px;
   -fx-padding: 2 2 2 2;
 
 }
@@ -98,50 +98,10 @@ fx-border-color:#00a2d3;
 -fx-border-color:#00a2d3;
 -fx-border-radius :30px;
 -fx-background-radius :30px;
- -fx-border-width: 5px;
+ -fx-border-width: 3px;
   -fx-padding: 2 2 2 2;
 }
-.button-leftpane:active
-{
-	-fx-background-color:whitesmoke ;
-	-fx-text-fill :  #00A2D3;
-    -fx-underline :false;
-    -fx-cursor :  WAIT;
-    -fx-border-width :5px;
-	
-}
-.button-leftpane:pressed
-{
-	-fx-background-color: #00a2d3;
-    -fx-underline :false;
-    -fx-cursor :  WAIT;
-    -fx-border-width :5px;
-	
-}
-.button-leftpane:clicked
-{
-	-fx-background-color: aqua   ;
-	-fx-text-fill :  blue ;
-    -fx-underline :false;
-    -fx-cursor :  WAIT;
-    -fx-border-width :5px;
-}
-.button-leftpane:selected
-{
-	-fx-background-color: aqua   ;
-	-fx-text-fill :  blue ;
-    -fx-underline :false;
-    -fx-cursor :  WAIT;
-    -fx-border-width :5px;
-}
-.button-leftpane:default
-{
-	-fx-background-color: aqua   ;
-	-fx-text-fill :  blue ;
-    -fx-underline :false;
-    -fx-cursor :  WAIT;
-    -fx-border-width :5px;
-}
+
 .tree-cell
 {
  -fx-background-color: #1EBEA5 ;
