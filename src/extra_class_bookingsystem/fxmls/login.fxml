@@ -77,11 +77,15 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="169.0" layoutY="47.0">
-               <image>
-                  <Image url="@../icons8_lock_96px.png" />
-               </image>
-            </ImageView>
+            <VBox alignment="CENTER" layoutX="-3.0" layoutY="30.0" prefHeight="152.0" prefWidth="464.0">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="98.0">
+                     <image>
+                        <Image url="@../icons8_lock_96px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
       
           </children>
       </AnchorPane>
