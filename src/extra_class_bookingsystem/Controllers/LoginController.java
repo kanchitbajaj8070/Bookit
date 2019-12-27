@@ -100,6 +100,7 @@ public void sign_in_action()
 {    btnSignin.setDisable(true);
     signInTask s= new signInTask();
     Platform.runLater(() -> {
+        btnSignin.setText("Signing In...");
         progressDashboard.setVisible(true);
         progressLabel.setVisible(true);
     });
@@ -111,6 +112,7 @@ public void sign_in_action()
         @Override
         public void handle(WorkerStateEvent event) {
             btnSignin.setDisable(false);
+            btnSignin.setText("Sign In");
             Boolean res= s.getValue();
             System.out.println("val is "+res +"!!!");
             Platform.runLater(()->{ progressLabel.setText("opening dashboard!!!!!!!");});
@@ -158,6 +160,7 @@ public void sign_in_action()
         @Override
         public void handle(WorkerStateEvent event) {
             btnSignin.setDisable(false);
+            btnSignin.setText("Sign In");
             progressDashboard.setVisible(false);
             progressLabel.setVisible(false);
             progress.setVisible(false);

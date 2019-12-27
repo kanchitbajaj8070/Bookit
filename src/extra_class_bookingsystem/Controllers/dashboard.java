@@ -465,7 +465,6 @@ public class dashboard  implements Initializable {
 
     public void deleteRowFromTable() {
         ExecutorService service = Executors.newFixedThreadPool(2);
-
         delTask = new deleteTask();
 
         progressDelete.visibleProperty().bind(delTask.runningProperty());
